@@ -18,6 +18,16 @@ namespace BasicAuthentication.Filter
 {
     public class AuthenticFilter : IAuthenticationFilter
     {
-        
+        public bool AllowMultiple => throw new NotImplementedException();
+
+        public Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ChallengeAsync(HttpAuthenticationChallengeContext context, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
