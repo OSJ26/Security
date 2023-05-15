@@ -14,7 +14,10 @@ namespace BasicAuthentication.Controllers
     {
         readonly BlUser objBlUser = new BlUser();
 
-
+        /// <summary>
+        /// get user details from bl
+        /// </summary>
+        /// <returns>returns HttpResponseMessage</returns>
         [HttpGet]
         [Route("getUser")]
         public  HttpResponseMessage getUser()
@@ -26,6 +29,10 @@ namespace BasicAuthentication.Controllers
             return Request.CreateErrorResponse(HttpStatusCode.Forbidden, objBlUser.blUser().errorMessage);
         }
 
+        /// <summary>
+        /// get user details from bl by id
+        /// </summary>
+        /// <returns>returns HttpResponseMessage</returns>
         [HttpGet]
         [Route("getUserById/{id}")]
         public HttpResponseMessage getUserById(int id)

@@ -16,6 +16,10 @@ namespace BasicAuthentication.Bl
         readonly ResponseModel objResponse = new ResponseModel();
         readonly DbUser objDbUser = new DbUser();
 
+        /// <summary>
+        /// used to get all data of user
+        /// </summary>
+        /// <returns> status 200 if condition true else 403</returns>
         public ResponseModel blUser()
         { 
             DataTable dtUser = objDbUser.getUserDetails();
@@ -34,6 +38,10 @@ namespace BasicAuthentication.Bl
 
         }
 
+        /// <summary>
+        /// used to get all data of user by id
+        /// </summary>
+        /// <returns> status 200 if condition true else 403</returns>
         public ResponseModel blUserById(int id)
         {
             DataTable dtUser = objDbUser.getUserById(id);
@@ -53,7 +61,7 @@ namespace BasicAuthentication.Bl
         }
 
         /// <summary>
-        /// 
+        /// authenticate user by email and password
         /// </summary>
         /// <param name="Email"></param>
         /// <param name="password"></param>

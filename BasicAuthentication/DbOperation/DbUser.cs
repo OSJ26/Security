@@ -9,6 +9,11 @@ namespace BasicAuthentication.DbOperation
     public class DbUser
     {
         MySqlConnection objConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["TntConnection"].ConnectionString);
+        
+        /// <summary>
+        /// get all user details
+        /// </summary>
+        /// <returns>Datatable</returns>
         public DataTable getUserDetails()
         {
         
@@ -48,6 +53,11 @@ namespace BasicAuthentication.DbOperation
             }
         }
 
+        /// <summary>
+        /// get user by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> returns datatable</returns>
         public DataTable getUserById([FromUri] int id) 
         {
             
@@ -88,6 +98,12 @@ namespace BasicAuthentication.DbOperation
             }
         }
 
+        /// <summary>
+        /// Authenticate the user by email and password
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <param name="password"></param>
+        /// <returns> return data table </returns>
         public DataTable AuthenticateUser(string Email, string password)
         { 
             try 
