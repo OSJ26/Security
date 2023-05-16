@@ -32,11 +32,7 @@ namespace AuthenticatFilter.Filter
                     ReasonPhrase = "Internal Server Error.Please Contact your Administrator."
             };
             actionExecutedContext.Response = response;
-            string path = @"F:\C# Advance\BasicAuthentication\AuthenticatFilter\Log\ExceptionLog.txt";
-            using (StreamWriter objWriter = File.AppendText(path))
-            {
-                objWriter.WriteLine(actionExecutedContext.Response);
-            }
+            
         }
     }
 }
