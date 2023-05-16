@@ -163,8 +163,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authenticator\ValidateUser.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Filter\Authorization.cs" />
-    <Compile Include="Filter\RoleBaseAuthenticate.cs" />
+    <Compile Include="App_Start\Authorization.cs" />
+    <Compile Include="App_Start\RoleBaseAuthenticate.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,6 +182,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Filter\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

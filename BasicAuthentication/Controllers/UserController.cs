@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace BasicAuthentication.Controllers
 {
-    [AuthenticFilter]
+    /*[AuthenticFilter]*/
     public class UserController : ApiController
     {
         readonly BlUser objBlUser = new BlUser();

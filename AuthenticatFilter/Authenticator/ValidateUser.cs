@@ -25,7 +25,7 @@ namespace AuthenticatFilter.Authenticator
             {
                 using (var db = dbFactory.Open())
                 {
-                    return db.Select<User>().Any<User>(user => user.Email.Equals(email) && user.Password.Equals(password));
+                    return db.Select<User>().Any<User>(user => user.Email.Equals(email) && user.pwd.Equals(password));
                     
                 }
             }
@@ -49,7 +49,7 @@ namespace AuthenticatFilter.Authenticator
             {
                 using (var db = dbFactory.Open())
                 {
-                    return db.Select<User>().FirstOrDefault<User>(user => user.Email.Equals(email) && user.Password.Equals(password));
+                    return db.Select<User>().FirstOrDefault<User>(user => user.Email.Equals(email) && user.pwd.Equals(password));
                 }
             }
             catch (Exception ex)

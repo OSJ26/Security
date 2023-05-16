@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuthenticatFilter.Authenticator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -14,7 +15,7 @@ namespace AuthenticatFilter.Filter
         {
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                base.HandleUnauthorizedRequest(actionContext);
+                actionContext.Request.Method = HttpMethod.Get;
             }
             else
             {

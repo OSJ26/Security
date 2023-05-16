@@ -7,12 +7,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Filters;
+using Authorization = AuthenticatFilter.Filter.Authorization;
 
 namespace AuthenticatFilter.Controllers
 {
+    [RoleBaseAuthenticate]
     public class UserController : ApiController
     {
-        [Filter.Authorization(Roles = "a")]
+        [Authorization(Roles = "u")]
         [HttpGet]
         public IHttpActionResult GetUser()
         {
