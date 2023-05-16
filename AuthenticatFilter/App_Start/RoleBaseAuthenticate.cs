@@ -15,6 +15,7 @@ using static ServiceStack.OrmLite.Dapper.SqlMapper;
 
 namespace AuthenticatFilter.Filter
 {
+    [Filter.Exception]
     public class RoleBaseAuthenticate : AuthorizationFilterAttribute
     {
         public override void OnAuthorization(HttpActionContext actionContext)

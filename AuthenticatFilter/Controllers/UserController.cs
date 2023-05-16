@@ -15,6 +15,7 @@ namespace AuthenticatFilter.Controllers
     [RoleBaseAuthenticate]
     public class UserController : ApiController
     {
+        [Filter.Exception]
         [Authorization(Roles = "u")]
         [HttpGet]
         public IHttpActionResult GetUser()
